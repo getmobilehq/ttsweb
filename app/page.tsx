@@ -1,15 +1,41 @@
-// Placeholder home page. The single-scroll landing is assembled here from
-// section components in `components/` during the build phase — see HANDOFF.md
-// §4 (information architecture) and §5 (component breakdown).
+import { Nav } from "@/components/Nav";
+import { Hero } from "@/components/Hero";
+import { Problem } from "@/components/Problem";
+import { WhyBpo } from "@/components/WhyBpo";
+import { Glance } from "@/components/Glance";
+import { Pillars } from "@/components/Pillars";
+import { SupportGrid } from "@/components/SupportGrid";
+import { PartnerCta } from "@/components/PartnerCta";
+import { Footer } from "@/components/Footer";
+import { operators, government } from "@/lib/content";
+
 export default function Home() {
   return (
-    <main className="mx-auto max-w-content px-6 py-24">
-      <p className="font-display text-eyebrow text-sm font-semibold uppercase tracking-eyebrow text-green-600">
-        Technology Talent Services · Nigeria
-      </p>
-      <h1 className="mt-4 max-w-read text-4xl font-extrabold text-ink">
-        Scaffold ready. Build the sections next.
-      </h1>
-    </main>
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <Problem />
+        <WhyBpo />
+        <Glance />
+        <Pillars />
+        <SupportGrid
+          id="operators"
+          variant="dark"
+          eyebrow={operators.eyebrow}
+          heading={operators.heading}
+          items={operators.items}
+        />
+        <SupportGrid
+          id="government"
+          variant="light"
+          eyebrow={government.eyebrow}
+          heading={government.heading}
+          items={government.items}
+        />
+        <PartnerCta />
+      </main>
+      <Footer />
+    </>
   );
 }

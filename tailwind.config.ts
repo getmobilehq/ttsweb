@@ -11,6 +11,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // The prototype is desktop-first with breakpoints at 900px (stack
+      // hero/grids) and 560px (collapse stat band). Re-expressed mobile-first:
+      // `mid` ≥560px, `wide` ≥900px is where the desktop layouts kick in.
+      screens: {
+        mid: "560px",
+        wide: "900px",
+      },
       colors: {
         green: {
           DEFAULT: "#00B75B", // primary CTA fill / accent only
