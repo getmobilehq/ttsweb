@@ -63,9 +63,11 @@ export const problem = {
       body: "Youth unemployment sits at 53.4%, and young women face it at nearly 1.7× the rate of men — compounded for persons with disabilities and internally displaced persons through gender bias, geography, and unequal digital access.",
     },
     {
-      big: "5",
-      title: "Operators, underserved",
-      body: "Nigeria's BPO sector faces limited access to industry-ready talent, infrastructure gaps, trust concerns that weaken client confidence, and thin policy incentives. We address all five through structured support.",
+      // "5×" traces to HANDOFF §4's "5-fold operator gap" — confirm the figure
+      // against its source before public launch.
+      big: "5×",
+      title: "The operator talent gap",
+      body: "Demand for industry-ready BPO talent far outpaces local supply — alongside infrastructure gaps, trust concerns, and thin policy incentives. We close the gap through structured support.",
     },
   ] satisfies ProblemCard[],
 };
