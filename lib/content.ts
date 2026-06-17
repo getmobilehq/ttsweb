@@ -32,17 +32,21 @@ export const hero = {
   ] satisfies Stat[],
 };
 
+// Photo tiles render the duotone placeholder until `src` is set. To ship real
+// photography (HANDOFF §8): drop approved images in /public/images/, set `src`
+// to the public path (e.g. "/images/participant-1.jpg"), and finalise `alt`.
+// Use only programme-supplied images — no stock or third-party photography.
 export type MosaicTile =
-  | { kind: "photo"; label: string; span?: boolean }
+  | { kind: "photo"; label: string; alt: string; src?: string; span?: boolean }
   | { kind: "word"; text: string; tone: "green" | "lemon" | "yellow" | "cream"; span?: boolean };
 
 export const mosaicTiles: MosaicTile[] = [
   { kind: "word", text: "Inclusive opportunities", tone: "green", span: true },
-  { kind: "photo", label: "Photo" },
-  { kind: "photo", label: "Photo" },
+  { kind: "photo", label: "Photo", alt: "A TTS Nigeria programme participant" },
+  { kind: "photo", label: "Photo", alt: "A TTS Nigeria programme participant in BPO training" },
   { kind: "word", text: "Local impact", tone: "yellow" },
   { kind: "word", text: "Global relevance", tone: "cream" },
-  { kind: "photo", label: "Brand photography", span: true },
+  { kind: "photo", label: "Brand photography", alt: "TTS Nigeria participants at work in a BPO setting", span: true },
   { kind: "word", text: "Dignified work", tone: "lemon" },
 ];
 
