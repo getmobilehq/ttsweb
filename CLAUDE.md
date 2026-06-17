@@ -56,6 +56,14 @@ These are programme rules, not preferences — violating them blocks launch:
 
 Lighthouse ≥ 95 on all four categories (mobile) · WCAG 2.1 AA (contrast rule, `:focus-visible`, full keyboard nav incl. mobile menu, image `alt`, `prefers-reduced-motion` respected) · CLS ~0 · clean `next build` and ESLint · renders 360px→1440px+ · all `mailto:`/`tel:` links correct · favicons/app icons generated from the roundel.
 
+## Deployment (Netlify)
+
+Hosted on **Netlify** at `https://ttsweb.netlify.app` (Netlify auto-detects Next.js and uses `@netlify/plugin-nextjs`). Notes:
+
+- **This URL is public.** HANDOFF §13 requires two-week comms pre-approval before any public communications go live — treat the Netlify URL as internal-review-only and add Netlify access protection (password / Identity) if it must stay locked down until sign-off.
+- Set `NEXT_PUBLIC_SITE_URL` in the Netlify site's environment to `https://ttsweb.netlify.app` (or the final domain). Otherwise canonical/OpenGraph URLs fall back to the `lib/site.ts` default (`https://www.ttsnigeria.org`), which won't match the live host.
+- The OG image, favicon, and Apple icon are generated at build by `next/og` and prerender fine on Netlify's Next runtime.
+
 ## Out of scope for v1 (HANDOFF §12 — do not build now)
 
 Participant "Join/Apply" path · partnership inquiry form + email backend · CMS · news/insights section · analytics + consent banner · multi-language.

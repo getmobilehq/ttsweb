@@ -1,0 +1,11 @@
+# Netlify build config. The Next.js runtime plugin handles routing, the OG/icon
+# image functions, and output — no `publish` dir needed when it's active.
+[build]
+  command = "npm run build"
+
+[build.environment]
+  # Next.js 16 requires Node >= 20.9.
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
