@@ -1,18 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
-// Scroll-reveal wrapper (HANDOFF §7). Fades/translates content in on first
-// intersection. Respects prefers-reduced-motion by rendering visible
-// immediately, and falls back to visible where IntersectionObserver is absent.
+// Scroll-reveal wrapper (HANDOFF_V2 §3). Emits the prototype's `.reveal` / `in`
+// classes; the CSS handles the transition and the reduced-motion reset.
 export function Reveal({
   children,
   className = "",
-  as: Tag = "div",
+  style,
 }: {
   children: ReactNode;
   className?: string;
-  as?: "div" | "section";
+  style?: CSSProperties;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);
@@ -23,8 +22,6 @@ export function Reveal({
 
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced || !("IntersectionObserver" in window)) {
-      // Reveal immediately (deferred a frame to avoid a synchronous re-render in
-      // the effect body); the motion-reduce transition reset makes it instant.
       const id = requestAnimationFrame(() => setShown(true));
       return () => cancelAnimationFrame(id);
     }
@@ -45,13 +42,12 @@ export function Reveal({
   }, []);
 
   return (
-    <Tag
-      ref={ref as never}
-      className={`transition-[opacity,transform] duration-[600ms] ease-out motion-reduce:transition-none ${
-        shown ? "opacity-100 translate-y-0" : "translate-y-[22px] opacity-0"
-      } ${className}`}
+    <div
+      ref={ref}
+      style={style}
+      className={`reveal${shown ? " in" : ""}${className ? ` ${className}` : ""}`}
     >
       {children}
-    </Tag>
+    </div>
   );
 }
