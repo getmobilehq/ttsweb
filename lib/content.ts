@@ -2,7 +2,7 @@
 // Copy is verbatim from the approved prototype — do not paraphrase or invent.
 // CMS-ready: Stories/Insights/Programmes data here is placeholder scaffolding
 // until wired to a content source.
-import { APPLY_URL, MAIL } from "./links";
+import { APPLY_URL, BPO_REGISTER, MAIL } from "./links";
 
 // Photography lives in /public/images. Real, consent-cleared participant photos
 // must replace the illustrative set in the Stories slots before launch
@@ -105,8 +105,8 @@ export const audiences: Audience[] = [
     imgAlt: "A professional team in a bright modern office",
     title: "A new market. A trusted path forward.",
     body: "Nigeria is home to one of the world's largest emerging talent pools. We help international employers unlock it through trusted local partnerships, workforce-ready talent, and an ecosystem designed for long-term growth — whether you're exploring a new delivery location or scaling existing operations.",
-    cta: "Partner with us",
-    ctaHref: MAIL,
+    cta: "Become a BPO partner",
+    ctaHref: BPO_REGISTER,
   },
   {
     id: "a-ng-gov",
@@ -118,8 +118,8 @@ export const audiences: Audience[] = [
     imgAlt: "A group of Nigerian women, including wheelchair users",
     title: "Strengthening Nigeria's competitiveness in the global outsourcing economy.",
     body: "As demand for technology-enabled services grows, Nigeria's opportunity lies in creating export-earning jobs at scale. We connect employers, operators, and government to unlock structured access to global digital work for young women — increasing foreign-exchange earnings and national competitiveness.",
-    cta: "Collaborate with us",
-    ctaHref: MAIL,
+    cta: "Become a BPO partner",
+    ctaHref: BPO_REGISTER,
   },
   {
     id: "a-int-gov",
@@ -130,8 +130,8 @@ export const audiences: Audience[] = [
     imgAlt: "A diverse group of professional women",
     title: "Reliable delivery capacity in the global outsourcing economy.",
     body: "Global demand for outsourced services is accelerating, driving the need for diversified, resilient delivery markets. Nigeria is uniquely positioned through its scale, youthful talent, and expanding ecosystem — and we turn that national advantage into dependable global opportunity.",
-    cta: "Collaborate with us",
-    ctaHref: MAIL,
+    cta: "Become a BPO partner",
+    ctaHref: BPO_REGISTER,
   },
 ];
 

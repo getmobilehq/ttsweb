@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { TtsMark } from "./ui/TtsMark";
-import { APPLY_URL, MAIL } from "@/lib/links";
+import { APPLY_URL, BPO_REGISTER } from "@/lib/links";
 
 const PAGES: [string, string][] = [
   ["/", "Home"],
@@ -41,8 +41,8 @@ export function Nav() {
           ))}
         </nav>
         <div className="nav-end">
-          <a className="btn btn-ghost" href={MAIL}>
-            Partner with us
+          <a className="btn btn-ghost" href={BPO_REGISTER}>
+            Become a BPO partner
           </a>
           <a className="btn btn-primary keep" href={APPLY_URL}>
             Apply for free

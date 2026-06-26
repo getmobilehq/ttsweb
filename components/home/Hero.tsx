@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "../ui/Reveal";
-import { APPLY_URL, MAIL } from "@/lib/links";
+import { APPLY_URL, BPO_REGISTER } from "@/lib/links";
 import { hero, stats, IMAGES } from "@/lib/content";
 
 export function Hero() {
@@ -24,8 +24,8 @@ export function Hero() {
               <a className="btn btn-primary" href={APPLY_URL}>
                 Apply for free
               </a>
-              <a className="btn btn-ghost" href={MAIL}>
-                Partner with us
+              <a className="btn btn-ghost" href={BPO_REGISTER}>
+                Become a BPO partner
               </a>
             </div>
           </div>
