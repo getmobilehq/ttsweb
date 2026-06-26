@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
 export const alt =
-  "TTS Nigeria Initiative — industry-ready BPO talent, sourced for inclusion and impact";
+  "TTS Nigeria Initiative — pathways to dignified digital work, at global scale";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -37,7 +37,7 @@ export default async function Image() {
               maxWidth: 940,
             }}
           >
-            Industry-ready BPO talent, sourced for inclusion and impact.
+            Pathways to dignified digital work, at global scale.
           </div>
           <div style={{ display: "flex", fontSize: 28, color: "#FDC00D", marginTop: 28 }}>
             Inclusive opportunities · Local impact · Global relevance

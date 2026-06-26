@@ -1,20 +1,68 @@
+import Link from "next/link";
 import { TtsMark } from "./ui/TtsMark";
-import { footer } from "@/lib/content";
+import { APPLY_URL, MAIL, FRAUD, PARTNERSHIP_EMAIL, TAG } from "@/lib/links";
+
+// Static year stamped at build (Server Component) — no client Date to avoid
+// hydration drift.
+const YEAR = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="bg-green-900 py-[46px] text-white/70">
-      <div className="mx-auto flex max-w-content flex-wrap items-center justify-between gap-6 px-6">
-        <div className="flex items-center gap-3">
-          <TtsMark size={40} />
+    <footer className="foot">
+      <div className="wrap">
+        <div className="foot-top">
           <div>
-            <div className="font-display text-[1.05rem] font-bold -tracking-[0.02em] text-white">
-              {footer.tag}
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <TtsMark size={42} />
+              <div className="tag" style={{ marginTop: 0 }}>
+                TTS Nigeria Initiative
+              </div>
             </div>
-            <small className="text-[0.82rem] leading-[1.6]">{footer.tagline}</small>
+            <p style={{ marginTop: 16, maxWidth: "40ch", fontSize: ".92rem" }}>{TAG}</p>
+            <p style={{ marginTop: 18, fontSize: ".88rem" }}>
+              <b style={{ color: "#fff" }}>TTS Nigeria is free, always.</b> We never charge for
+              applications, training, or placement.
+            </p>
+          </div>
+          <div>
+            <h5>Explore</h5>
+            <ul>
+              <li>
+                <Link href="/about">About us</Link>
+              </li>
+              <li>
+                <Link href="/stories">Stories of impact</Link>
+              </li>
+              <li>
+                <Link href="/programmes">Programmes &amp; states</Link>
+              </li>
+              <li>
+                <Link href="/insights">Insights &amp; updates</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5>Get involved</h5>
+            <ul>
+              <li>
+                <a href={APPLY_URL}>Apply for free</a>
+              </li>
+              <li>
+                <a href={MAIL}>Become a partner</a>
+              </li>
+              <li>
+                <a href={MAIL}>{PARTNERSHIP_EMAIL}</a>
+              </li>
+              <li>
+                <a href={FRAUD}>Report fraud</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <small className="text-[0.82rem] leading-[1.6]">{footer.consortium}</small>
+        <div className="foot-bot">
+          <span>© {YEAR} Technology Talent Services Nigeria Initiative.</span>
+          <span>A consortium programme advancing inclusive, impact-sourced digital work.</span>
+        </div>
       </div>
     </footer>
   );

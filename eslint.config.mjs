@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     // Reference artifact, not app code — the prototype is ported into
     // components/ during the build phase (see HANDOFF.md).
     "tts-nigeria-landing.jsx",
+    "tts-nigeria-v2.jsx",
   ]),
 ]);
 
