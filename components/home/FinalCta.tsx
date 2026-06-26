@@ -1,4 +1,4 @@
-import { APPLY_URL, MAIL } from "@/lib/links";
+import { APPLY_URL, BPO_REGISTER } from "@/lib/links";
 import { finalCta } from "@/lib/content";
 
 export function FinalCta() {
@@ -12,8 +12,8 @@ export function FinalCta() {
           <a className="btn btn-primary" href={APPLY_URL}>
             Apply for free
           </a>
-          <a className="btn btn-light" href={MAIL}>
-            Become a partner
+          <a className="btn btn-light" href={BPO_REGISTER}>
+            Become a BPO partner
           </a>
         </div>
       </div>

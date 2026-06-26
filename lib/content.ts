@@ -2,7 +2,7 @@
 // Copy is verbatim from the approved prototype — do not paraphrase or invent.
 // CMS-ready: Stories/Insights/Programmes data here is placeholder scaffolding
 // until wired to a content source.
-import { APPLY_URL, BPO_REGISTER, MAIL } from "./links";
+import { APPLY_URL, BPO_REGISTER } from "./links";
 
 // Photography lives in /public/images. Real, consent-cleared participant photos
 // must replace the illustrative set in the Stories slots before launch
@@ -93,8 +93,8 @@ export const audiences: Audience[] = [
     imgAlt: "Colleagues collaborating in a Nigerian office",
     title: "The growth you want. The talent you need.",
     body: "The global tech outsourcing sector is full of opportunity. TTS Nigeria helps you seize it — opening pathways to new markets, connecting you to workforce-ready talent, and facilitating an enabling business environment.",
-    cta: "Contact us today",
-    ctaHref: MAIL,
+    cta: "Become a BPO partner",
+    ctaHref: BPO_REGISTER,
   },
   {
     id: "a-int-bpo",
