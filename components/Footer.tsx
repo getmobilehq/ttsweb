@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { TtsMark } from "./ui/TtsMark";
 import { APPLY_URL, MAIL, FRAUD, PARTNERSHIP_EMAIL, TAG } from "@/lib/links";
 
@@ -58,6 +59,16 @@ export function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="foot-funder">
+          <span className="eyebrow">In partnership with</span>
+          <Image
+            src="/images/mastercard-foundation.png"
+            alt="Mastercard Foundation"
+            width={150}
+            height={142}
+            className="foot-funder-mark"
+          />
         </div>
         <div className="foot-bot">
           <span>© {YEAR} Technology Talent Services Nigeria Initiative.</span>

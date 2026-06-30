@@ -782,12 +782,35 @@ a {
 .foot a:hover {
   color: var(--yellow);
 }
+.foot-funder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding-top: 32px;
+}
+.foot-funder .eyebrow {
+  font-family: var(--body);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* Clear space (≥ wordmark height) + min size per Mastercard Foundation
+   brand guidelines; full-colour reverse master artwork, never recoloured. */
+.foot-funder-mark {
+  width: 150px;
+  height: auto;
+}
 .foot-bot {
   display: flex;
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
   padding-top: 28px;
+  margin-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 0.84rem;
 }
 
