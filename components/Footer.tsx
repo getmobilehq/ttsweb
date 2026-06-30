@@ -13,19 +13,6 @@ export function Footer() {
       <div className="wrap">
         <div className="foot-top">
           <div>
-            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <TtsMark size={42} />
-              <div className="tag" style={{ marginTop: 0 }}>
-                TTS Nigeria Initiative
-              </div>
-            </div>
-            <p style={{ marginTop: 16, maxWidth: "40ch", fontSize: ".92rem" }}>{TAG}</p>
-            <p style={{ marginTop: 18, fontSize: ".88rem" }}>
-              <b style={{ color: "#fff" }}>TTS Nigeria is free, always.</b> We never charge for
-              applications, training, or placement.
-            </p>
-          </div>
-          <div>
             <h5>Explore</h5>
             <ul>
               <li>
@@ -61,14 +48,29 @@ export function Footer() {
           </div>
         </div>
         <div className="foot-funder">
-          <span className="eyebrow">In partnership with</span>
-          <Image
-            src="/images/mastercard-foundation.png"
-            alt="Mastercard Foundation"
-            width={150}
-            height={142}
-            className="foot-funder-mark"
-          />
+          <div className="foot-funder-credit">
+            <span className="eyebrow">In partnership with</span>
+            <Image
+              src="/images/mastercard-foundation.png"
+              alt="Mastercard Foundation"
+              width={150}
+              height={142}
+              className="foot-funder-mark"
+            />
+          </div>
+          <div className="foot-brand">
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <TtsMark size={42} />
+              <div className="tag" style={{ marginTop: 0 }}>
+                TTS Nigeria Initiative
+              </div>
+            </div>
+            <p style={{ marginTop: 16, maxWidth: "40ch", fontSize: ".92rem" }}>{TAG}</p>
+            <p style={{ marginTop: 18, fontSize: ".88rem" }}>
+              <b style={{ color: "#fff" }}>TTS Nigeria is free, always.</b> We never charge for
+              applications, training, or placement.
+            </p>
+          </div>
         </div>
         <div className="foot-bot">
           <span>© {YEAR} Technology Talent Services Nigeria Initiative.</span>
